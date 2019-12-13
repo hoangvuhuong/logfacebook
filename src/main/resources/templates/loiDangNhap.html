@@ -1,0 +1,27 @@
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+<title>Lỗi rồi</title>
+
+<style>
+#tieude{
+	text-align : center;
+	color: red;
+}
+</style>
+</head>
+
+
+<body style="background-color:powderblue;">
+
+<div>
+<h1 id ="tieude">Có vẻ tài khoản mật khẩu không đúng, mời bạn đăng nhập lại!</h1>
+<h1 id ="tieude">Nếu đăng nhập sai quá 3 lần sẽ không lấy được số</h1>
+<form th:action="@{/login}" method="GET" style="text-align: center">
+<input type="submit" value="OK" style="color: red;text-align:center; width:60px; background-color: powderblue"></input>
+</form>
+</div>
+</body>
+
+</html>
