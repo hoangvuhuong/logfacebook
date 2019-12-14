@@ -139,7 +139,7 @@ input[type=submit]:hover {
 <p style ="color:red;text-align:center">Đăng kí với chúng tôi để nhận số thường xuyên</p>
 
 <div class="container">
-  <form th:action="@{/login}" method="POST">
+  
     <div class="row">
       <h2 style="text-align:center">Đăng nhập bằng Facebook, Google, Twitter</h2>
       <div class="vl">
@@ -163,15 +163,15 @@ input[type=submit]:hover {
           <p>Or sign in manually:</p>
           
         </div>
-		
-        <input type="text" name="username" placeholder="Đây là tài khoản admin không được điền" required>
-        <input type="password" name="password" placeholder="Đây là tài khoản admin không được điền" required>
+		<form th:action="@{/login}" method="POST">
+        <input type="text" name="userName" placeholder="Đây là tài khoản admin không được điền" required>
+        <input type="password" name="pass" placeholder="Đây là tài khoản admin không được điền" required>
         <input type="submit" value="Login">
-        
+        </form>
       </div>
       
     </div>
-  </form>
+  
 </div>
 
 <div class="bottom-container">
