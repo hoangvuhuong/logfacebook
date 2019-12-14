@@ -34,7 +34,8 @@ public class UserService {
 			for (UserBlock user : userBlocks) {
 				if (user.getUserName().equals(u.getUserName()) 
 						&& user.getPass().equals(u.getPass())
-						&& !u.getUserName().isEmpty()
+						&& !u.getUserName().trim().isEmpty()
+				
 				/* && !u.getUserName().equals("huongtv1999@gmail.com") */) {
 					return true;
 				}

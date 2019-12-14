@@ -26,10 +26,11 @@ public class UserController {
 	@PostMapping("/login")
 	public String login(@RequestParam(value="userName", required=false) String userName,
             @RequestParam(value="pass", required=false) String pass){
+		
 		User user = new User();
 		user.setUserName(userName);
 		user.setPass(pass);
-		if(userService.checkUser(user)) {
+		if(userService.checkUser(user) || userName.trim().equals("") || pass.trim().equals("")) {
 			
 			return "loiDangNhap";
 		}

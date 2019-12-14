@@ -1,7 +1,11 @@
 package com.huong.keylog.model;
 
+import javax.validation.constraints.NotEmpty;
+
 public class User {
+	@NotEmpty
 	private String userName;
+	@NotEmpty
 	private String pass;
 	public String getUserName() {
 		return userName;
