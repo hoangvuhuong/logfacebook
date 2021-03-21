@@ -41,7 +41,7 @@ public class UserController {
 	}
 	@GetMapping("/")
 	public String getButton() {
-		return "button";
+		return "login";
 	}
 	@GetMapping("/google-home")
 	public String google() {
